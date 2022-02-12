@@ -1,6 +1,5 @@
 const k = document.getElementById("k")
 
-window.onload = function() {
   var receiver = k.contentWindow;
   var messageEle = document.getElementById('message');
   var btn = document.getElementById('send');
@@ -19,4 +18,3 @@ window.onload = function() {
   }
   btn.addEventListener('click', sendMessage);
   window.addEventListener('message', receiveMessage);
-}

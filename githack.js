@@ -1,6 +1,5 @@
 const k = document.getElementById("k")
 
-window.onload = function() {
   var receiver = k.contentWindow;
   
   function receiveMessage(e) {
@@ -14,4 +13,3 @@ window.onload = function() {
     receiver.postMessage(JSON.stringify(localStorage), 'https://gapples2.github.io/TMT-Save-Transfer/');
   }
   window.addEventListener('message', receiveMessage);
-}
