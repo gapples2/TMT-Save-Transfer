@@ -1,3 +1,4 @@
+let l = "https://raw.githack.com/gapples2/TMT-Save-Transfer/glitch/githack.html"
 const k = document.getElementById("k")
 
   var receiver = k.contentWindow;
@@ -5,7 +6,7 @@ const k = document.getElementById("k")
   var btn = document.getElementById('send');
   
   function receiveMessage(e) {
-    if (e.origin !== "https://raw.githack.com/gapples2/TMT-Save-Transfer/glitch/githack.html")
+    if (e.origin !== l)
       return;
 
     console.log(JSON.parse(e.data))
@@ -14,7 +15,7 @@ const k = document.getElementById("k")
   function sendMessage(e) {
     e.preventDefault();
 
-    receiver.postMessage('storage please', 'https://raw.githack.com/gapples2/TMT-Save-Transfer/glitch/githack.html');
+    receiver.postMessage('storage please', l);
   }
   btn.addEventListener('click', sendMessage);
   window.addEventListener('message', receiveMessage);

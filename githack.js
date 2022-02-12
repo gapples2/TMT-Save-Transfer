@@ -1,11 +1,9 @@
-  function receiveMessage(e) {
-    if (e.origin !== "https://gapples2.github.io/TMT-Save-Transfer/")
-      return;
-
+let l = "https://gapples2.github.io/TMT-Save-Transfer/"
+function receiveMessage(e) {
     sendMessage()
   }
   
   function sendMessage(e) {
-    receiver.postMessage(JSON.stringify(localStorage), 'https://gapples2.github.io/TMT-Save-Transfer/');
+    receiver.postMessage(JSON.stringify(localStorage), l);
   }
   window.addEventListener('message', receiveMessage);
