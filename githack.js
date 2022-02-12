@@ -1,7 +1,3 @@
-const k = document.getElementById("k")
-
-  var receiver = k.contentWindow;
-  
   function receiveMessage(e) {
     if (e.origin !== "https://gapples2.github.io/TMT-Save-Transfer/")
       return;
