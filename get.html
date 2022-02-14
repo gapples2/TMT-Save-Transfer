@@ -3,17 +3,18 @@
   <head>
     <script>
       let l = "https://raw.githack.com/gapples2/TMT-Save-Transfer/glitch/githack.html"
+      const k = document.getElementById("txt")
 
       function receiveMessage(e) {
         if (e.origin !== l)
           return;
 
-        console.log(JSON.parse(e.data))
+        k.textContent = e.data
       }
       window.addEventListener('message', receiveMessage);
     </script>
   </head>
   <body>
-    hi
+    <span id="txt">hello</span>
   </body>
 </html>
